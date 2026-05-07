@@ -286,10 +286,49 @@
     #transition-overlay.active .trans-text { opacity: 1; transform: scale(1); }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      #landing {
+        justify-content: flex-start; /* Align to top on mobile to give more room */
+        padding-top: 40px;
+      }
+      .birthday-emoji { 
+        font-size: 50px; 
+        margin-bottom: 5px; 
+      }
+      .hbd-badge {
+        font-size: 10px;
+        padding: 4px 15px;
+        margin-bottom: 10px;
+      }
+      .hany-name { 
+        font-size: 60px; 
+        margin-bottom: 5px;
+      }
+      .divider {
+        width: 120px;
+        margin-bottom: 15px;
+      }
+      .wish-card { 
+        padding: 15px 20px; 
+        margin-bottom: 20px; 
+        max-width: 95%;
+      }
+      .wish-text {
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      .open-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+      }
+    }
+
     @media (max-height: 650px) {
       .birthday-emoji { font-size: 40px; margin-bottom: 5px; }
       .hany-name { font-size: 55px; }
-      .wish-card { padding: 15px 20px; margin-bottom: 20px; }
+      .wish-card { padding: 15px 20px; margin-bottom: 15px; }
+      .divider { margin-bottom: 10px; }
+      #landing { padding-top: 20px; }
     }
   </style>
 </head>

@@ -151,6 +151,22 @@
         color: white;
       }
 
+      /* ─── PAGE FADE-IN ─── */
+      body { animation: pageFadeIn 1.2s ease forwards; }
+      @keyframes pageFadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      /* ─── ENHANCED FLOWER GLOW ─── */
+      .flowers {
+        filter: drop-shadow(0 0 8px rgba(255, 100, 180, 0.3));
+      }
+      .flower__leafs::after {
+        background-color: #ff8fd4 !important;
+        filter: blur(12vmin) !important;
+      }
+
       /* ─── TOP MESSAGE (upgraded) ─── */
       .message-overlay {
         position: fixed; top: 26px; left: 50%; transform: translateX(-50%);
@@ -174,20 +190,38 @@
         50%       { transform: translateY(-7px); opacity: 1; }
       }
 
-      /* ─── PAGE FADE-IN ─── */
-      body { animation: pageFadeIn 1.2s ease forwards; }
-      @keyframes pageFadeIn {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-      }
-
-      /* ─── ENHANCED FLOWER GLOW ─── */
-      .flowers {
-        filter: drop-shadow(0 0 8px rgba(255, 100, 180, 0.3));
-      }
-      .flower__leafs::after {
-        background-color: #ff8fd4 !important;
-        filter: blur(12vmin) !important;
+      /* ─── RESPONSIVE ADJUSTMENTS ─── */
+      @media (max-width: 600px) {
+        .back-btn {
+          top: 15px;
+          left: 15px;
+          padding: 7px 14px;
+          font-size: 11px;
+        }
+        .message-overlay {
+          top: 70px; /* Move message below back button on mobile */
+          width: 90%;
+        }
+        .message-overlay .msg-text {
+          font-size: 16px;
+          white-space: normal; /* Allow text to wrap if needed */
+        }
+        .moon {
+          width: 50px;
+          height: 50px;
+          top: 20px;
+          right: 20px;
+        }
+        .moonbeam {
+          right: 40px;
+          width: 100px;
+        }
+        .poem-card {
+          bottom: 15px;
+        }
+        .poem-card p {
+          font-size: 13px;
+        }
       }
     </style>
 </head>
